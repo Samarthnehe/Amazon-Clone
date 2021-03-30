@@ -1,13 +1,21 @@
 import React from 'react';
 import './Home.css'
 import Banner from '../images/banner.jpg'
-import Product from './Product'
+import Product from './Product';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 function Home() {
     return (
         <div className="home">
+           
             <div className="home__container"> 
-                 <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="" />
+                <Carousel autoPlay emulateTouch infiniteLoop >
+                    <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="" />
+                    <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Samsung/SamsungM/M12/PEA/SaleTomorrow/D21200796_IN_WLME_SamsungGalaxy_M12_New_Launch_DesktopTallHero_1500x600_2._CB658360729_.jpg" alt="" />
+                    <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Luggage/March/BBS/GW/GW_PC_BUNK_1500x600._CB658312757_.jpg" alt="" />
+                </Carousel>
+                 
                 <div className="home__row">
                     <Product id="12345678" title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses" price={1559} image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg" rating={5}/>
                     <Product

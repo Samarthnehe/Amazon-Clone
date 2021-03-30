@@ -5,12 +5,15 @@
     margin-right: auto;
     max-width: 1300px;
 }
-
+#root > div > div.home > div > div.carousel-root > div:nth-child(2){
+    display: none;
+}
 .home__row{
     display: flex;
     z-index: 1;
     margin-left: 5px;
     margin-right: 5px;
+    margin-top: 30px;
 }
 .home__image{
     width: 100%;
